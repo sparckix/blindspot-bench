@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use BlindSpot-Bench or its findings, please cite the paper."
+title: "BlindSpot-Bench: Measuring the Oversight Gap Exactly"
+authors:
+  - family-names: Alami
+    given-names: Daniel
+year: 2026
+url: "https://github.com/sparckix/blindspot-bench"
+repository-code: "https://github.com/sparckix/blindspot-bench"
+abstract: >-
+  A research environment that makes the LLM oversight gap (the divergence between a
+  channel-limited overseer's beliefs and exact ground truth) a computed number under
+  optimization pressure. The gap opens as a threshold and localizes by probe stability.
+  Its locus fingerprints the agent (withhold vs. fabricate), it is observable without
+  ground truth, and the pattern reproduces in a second non-economy world and under a
+  non-LLM optimizer. The world, the oversight protocol, and the agent model are swappable.
+keywords:
+  - AI safety
+  - scalable oversight
+  - reward hacking
+  - specification gaming
+  - LLM agents
+  - evaluation

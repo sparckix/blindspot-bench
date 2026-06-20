@@ -1,0 +1,27 @@
+[project]
+name = "blindspot-bench"
+version = "0.3.0"
+description = "BlindSpot-Bench — a pluggable environment for measuring the LLM oversight gap (overseer belief vs. ground truth) exactly, under optimization pressure on a channel-limited supervision channel."
+authors = [{ name = "Daniel Alami" }]
+requires-python = ">=3.11"
+license = { text = "MIT" }
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+# The deterministic measurement spine and the mock-mode environment use the stdlib
+# only and are always runnable. These are pulled in only for real-model runs,
+# analysis, and plotting.
+llm = ["openai>=1.40", "anthropic>=0.39"]
+analysis = ["numpy>=1.26", "pandas>=2.1", "matplotlib>=3.8"]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["goodhart*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
